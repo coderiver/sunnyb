@@ -3,20 +3,331 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- <link href="css/bootstrap-responsive.css" rel="stylesheet"> -->
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/respond.js"></script>
+	<!-- Slider Plugin -->
+	<script type="text/javascript" src="js/jquery.cycle2.js"></script>
 </head>
-<body>
+<body class="body">
 
-<!-- BEGIN  out-->
-<div class="out">
-
+<!-- BEGIN .wrap-->
+<div id="wrap">
+<!-- BEGIN .container-->
+	<div class="container">
+		<!-- BEGIN header -->
+		<div class="header-wrap">
+			<div class="topper container">
+				<div class="row">
+					<div class="col-md-10 col-sm-9 col-xs-12">
+						<h3 class="h3">Stunning Greek Villa with swimming pool and amazing views</h3>
+						<div class="rating-wrap">
+							<p>Sleeps up to 8 guests - Corfu, Ionian Islands > Greece - Rating:</p>
+							<div class="rating"><img src="img/star.jpg" alt=""></div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-3 col-xs-12">
+						<div class="btn-wrap">
+							<a href="#" class="btn btn_custum btn_dark">EUR</a>
+							<div class="dropdown dropdown_lang">
+							  <a data-toggle="dropdown" href="#"  class="btn btn_custum btn_dark"><i class="ico i-eng"></i></a>
+							  <ul class="dropdown-menu" role="menu">
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 1</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 2</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 3</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 4</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 5</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 6</a></li>
+							    <li><a href="#"><i class="ico i-eng"></i> Language option 7</a></li>
+							  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header container">
+				<div class="row">
+				  <div class="col-md-4 col-sm-6 col-xs-12">
+				  	<div class="owners">
+				  		<div class="owners__media">
+				  			<a href="#"><img src="http://placehold.it/80x80" alt=" "></a>
+				  		</div>
+				  		<a href="#" class="owners__link">Eleanor & Mike <br> Sanderson</a>
+				  	</div>
+				  </div>
+				  <div class="col-md-4 col-sm-6 col-xs-12">
+				  	<div class="call">
+				  		<p class="call__now">Call us now!</p>
+				  		<p class="call__num"><strong>+44 203 322 300 8</strong></p>
+				  		<p>Extension: 57763</p>
+				  	</div>
+				  </div>
+				  <div class="col-md-4 col-sm-12 col-xs-12">
+				  	<div class="send">
+				  		<p><strong>Send an enquiry</strong></p>
+				  		<a href="#" class="btn btn_blue">Book your stay via email</a>
+				  	</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<!-- END .header -->
+		<div class="container ">
+			<div class="row">
+				<div class="wrapper-gallery">
+	        <div class="gallery cycle-slideshow container" 
+	            data-cycle-fx="scrollHorz" 
+	            data-cycle-slides=".gallery__item"
+	            data-cycle-timeout="0"
+	            data-cycle-prev=".gallery__prev"
+	            data-cycle-next=".gallery__next"
+	        >
+	            <div class="gallery__item">
+	            	<div class="gallery__img">
+	              	<img src="http://lorempixel.com/600/400/nature" width="600" height="400" alt="">
+	            	</div>
+	              <div class="gallery__text">
+	              	<h3>Property Title</h3>
+	              	<strong>Property Location</strong>
+	              	<p>Property short-overview</p>
+	              	<button type="button" class="btn btn-success">View property details</button>
+	              </div>
+	            </div>
+	            <div class="gallery__item">
+	            	<div class="gallery__img">
+	              	<img src="http://lorempixel.com/600/400/nature" width="600" height="400" alt="">
+	            	</div>
+	              <div class="gallery__text">
+	              	<h3>Property Title</h3>
+	              	<strong>Property Location</strong>
+	              	<p>Property short-overview</p>
+	              	<button type="button" class="btn btn-success">View property details</button>
+	              </div>
+	            </div>
+	        </div>
+	        <button class="gallery__nav gallery__prev"><i></i></button>
+	        <button class="gallery__nav gallery__next"><i></i></button>
+	    	</div>
+			</div>
+		</div>
+		<div class="container container_sha-top">
+			<h3>Our properties</h3>
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">6</div>
+							<div class="rating"></div>
+							<img class="img-responsive" src="img/pic1.png" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">6</div>
+							<div class="rating"></div>
+							<img class="img-responsive " src="http://lorempixel.com/600/400" width="600" height="400" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">68</div>
+							<div class="rating"></div>
+							<img class="img-responsive" src="img/pic1.png" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">6</div>
+							<div class="rating"></div>
+							<img class="img-responsive" src="img/pic1.png" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">68</div>
+							<div class="rating"></div>
+							<img class="img-responsive" src="img/pic1.png" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="thumbnail thumbnail_sha-bott">
+						<div class="price">
+							<i></i>
+							<p>From</p>
+							<strong>€89</strong>
+							<p>per night</p>
+						</div>
+						<div class="img-responsive__block">
+							<div class="preview">6</div>
+							<div class="rating"></div>
+							<img class="img-responsive" src="img/pic1.png" alt="img">	
+						</div>
+						<address class="text-center">
+							<h4>Chalet Foladeux</h4>
+							<p>Servoz, France</p>
+							<p>3 guests, 1 bedroom</p>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="container_sha-top block-padd">
+					<h3>5 star experience on the med - what a view - what a villa!”</h3>
+					<p>
+						We spent one week at Casa Windlenook in august 2012 and thoroughly enjoyed it. The Villa has been equipped with high spec furniture and equipment which really...
+					</p>
+					<div class="block__text_bott">
+						<i></i>
+						<strong>- Lorraine, </strong>
+						<span>Apr 04, 2011</span>
+						<a href="#" class="strong_green">Read full testimonial</a>
+					</div>
+				</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="container_sha-top block-padd">
+						<h3>5 star experience on the med - what a view - what a villa!”</h3>
+						<p>
+							We spent one week at Casa Windlenook in august 2012 and thoroughly enjoyed it. The Villa has been equipped with high spec furniture and equipment which really...
+						</p>
+						<div class="block__text_bott">
+							<i></i>
+							<strong>- Ed, </strong>
+							<span>Aug 06, 2012</span>
+							<a href="#" class="strong_green">Read full testimonial</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END .container -->
 </div>
-<!-- END out-->
-
+<!-- END .wrap -->
+<!-- BEGIN .footer -->
+<div class="footer-col col-xs-12">
+	<div class="container">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="container_bor-top block-padd">
+						<h3>Find us on social media</h3>
+						<div class="social">
+							<a class="facebook" href="#"><i></i></a>
+							<a class="twitter" href="#"><i></i></a>
+							<a class="p-soc" href="#"><i></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="container_bor-top block-padd">
+						<h3>Call us now</h3>
+						<strong>Tel: +44 203 322 300 8</strong><br>
+						<strong>Local: 577763</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container modal-footer footer-col__bott">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<a class="footer-col__logo" href="#"></a>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 padding_right">
+					<div class="footer-col__copyright">
+						<p class="footer-col__copyright_mod">&copy; 2013 The-Greek-Villa. All Rights Reserved.</p>
+						<p>A part of the Sunny Rentals network.</p>
+						<a href="#" class="strong_green">Privacy Policy - Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<!-- END .footer -->
 </body>
 </html>

@@ -1,2 +1,207 @@
 // Normally mainpage styles
- 
+.body
+	background: url('../img/background.png') 0 0 no-repeat !important 
+	background-size: cover !important
+	background-attachment: fixed !important
+#wrap
+	width: 100%
+	height: 100%
+.wrapper-gallery
+	position: relative
+.header
+	margin-top: 37px
+	margin-bottom: 17px
+	border-radius: 5px
+.header__row
+	border-radius: 5px
+	height: 300px
+.header__top
+	background: #5cd7e2
+.header__bottom
+	background: #fff
+	text-align: center
+.gallery
+	position: relative
+	height: 400px
+	margin-bottom: 20px
+	border-radius: 5px 5px 0 0
+	border-top: 5px solid rgba(92, 215, 226, 0.4)
+	overflow: hidden
+.gallery__item
+	display: block
+	float: left
+	width: 100%
+.gallery__img 
+	float: left
+	width: 70%
+	img
+		width: 100%
+.gallery__text
+	position: absolute
+	float: right
+	bottom: 0
+	right: 0
+	width: 30%
+	height: 100%
+	padding: 30px
+	color: #fff 
+	background: #384352 
+	.btn
+		position: absolute
+		bottom: 30px
+		left: 30px
+		right: 30px
+		width: 80%
+.gallery__nav 
+	position: absolute
+	top: 50%
+	margin-top: -20px
+	width: 40px
+	height: 40px
+	border-radius: 5px
+	box-shadow: 0 0 0 1px #7bb3cb
+	z-index: 200
+	+g(#85e9ef, #34c6d6)
+.gallery__prev 
+	left: -20px
+	i
+		position: absolute
+		top: 12px
+		left: 13px
+		+s(pref)
+.gallery__next 
+	right: -20px
+	i
+		position: absolute
+		top: 12px
+		right: 13px
+		+s(next)
+.block-padd
+	padding: 5px 25px 45px 30px 
+.img-responsive__block
+	position: relative
+	img
+		margin-bottom: 18px
+		width: 100%
+.thumbnail_sha-bott
+	// box-shadow: 0 -3px 0 0 #5cd7e2 inset
+	border-bottom: 5px solid #5cd7e2
+.container_sha-top
+	margin-bottom: 15px
+	background: #FFF 
+	border-radius: 5px
+	border-top: 6px solid #5cd7e2
+.container_bor-top
+	border-top: 6px solid #5cd7e2
+	background: #FFF 
+.price
+	position: absolute
+	padding: 6px 15px 
+	top: 17px
+	right: 11px
+	width: 96px
+	height: 62px
+	color: #FFF 
+	font-size: 15.06px 
+	line-height: 1
+	font-weight: normal
+	z-index: 1 
+	text-align: right
+	background: #3DC972 
+	i
+		position: absolute
+		right: 0
+		top: 100%
+		+s(pic2)
+.preview
+	position: absolute
+	bottom: 17px
+	right: 14px
+	width: 30px
+	height: 20px
+	color: #3DC972
+	text-align: center
+	vertical-align: middle
+	line-height: 1.5 
+	border-radius: 50%
+	border: 1px solid #42ca75 
+	background: #fff 
+	&:before
+		position: absolute
+		content: ""
+		bottom: -7px
+		right: 7px
+		+s(pic3)
+.rating
+	position: absolute
+	left: 0
+	top: 0
+	border-radius: 0 0 5px 0
+	+s(pic4)
+.block__text_bott
+	width: 100%
+	position: absolute
+	bottom: 25px
+	left: 30px
+	padding-left: 80px 
+	padding-right: 70px 
+	i
+		position: absolute
+		left: 10px
+		bottom: 0
+		+s(pic5)
+.strong_green
+	float: right
+	color: #3DC972
+	display: inline-block 
+	&:hover
+		color: #3DC972
+.footer-col
+	padding-bottom: 60px
+	background: #FFF 
+	.block-padd
+		padding: 5px 25px 45px 0
+.padding_left
+	margin-left: -15px
+	padding-right: -15px
+.padding_right
+	float: right
+	padding-right: -15px
+.padding_
+	margin-left: 0
+	margin-right: 0
+.social
+	a
+		position: relative
+		width: 30px
+		height: 30px
+		margin-right: 10px
+		display: inline-block
+		
+	.facebook
+		i
+			position: absolute
+			top: 0
+			left: 0
+			+s(fb)
+	.twitter
+		i
+			position: absolute
+			top: 0
+			left: 0
+			+s(tw)
+	.p-soc
+		i
+			position: absolute
+			top: 0
+			left: 0
+			+s(pt)
+.footer-col__logo
+	top: 0
+	left: 0
+	display: block
+	+s(logo-footer)
+.footer-col__copyright_mod
+	padding-right: 20px
+.footer-col__copyright
+	text-align: right

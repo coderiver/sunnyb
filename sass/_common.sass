@@ -1,49 +1,306 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+/*-------------------------  -------------------------*/
+
+/*------------------------- general -------------------------*/
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	position: relative
+	font-size: 14px 
 	line-height: 1.4
+	font-family: "Roboto", sans-serif !important
+	background: #f0eee8 !important
+.out
+	padding-top: 9px
+	position: relative
+.out__in
+	position: relative
+	z-index: 2
+.bg
+	width: 100%
+	height: 845px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	background: url(../img/icons/bg.png) #f0eee8
+	+cover
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "Roboto", sans-serif !important
+.wrap
+	padding: 20px 25px
+	margin-bottom: 19px
+	border-top: 6px solid #5299f4 
+	background: #FFF
+	@include border-radius(4px)
+	color: #434343
+	.h2
+		font-weight: 100
+		font-size: 22px
+		color: #434343 
+	p
+		margin-bottom: 20px
+.wrap__bottom
+	+clr
+	.wrap__rating
+		float: left
+	.wrap__more
+		float: right
+/*------------------------- header & topper-------------------------*/
+.rating-wrap
+	p
+		display: inline-block
+	.rating
+		display: inline-block
+.header-wrap__in
+	background: #FFF
 
+.topper
+	background: #5299F4
+	color: #fff
+	+border-radius(3px 3px 0 0)
+	.h3
+		font-weight: 400
+		font-size: 22px 
+.header
+	padding: 15px 0
+	margin-bottom: 16px
+	background: #FFF
+	+border-radius(0px 0px 3px 3px)
+/*------------------------- footer -------------------------*/
+.footer
+	background: #FFF
+	position: relative
+	z-index: 666
+	.logo
+		float: left
+		position: absolute
+		top: 15px
+		left: 15px
+	.copy 
+		text-align: right
+		line-height: 1
+		color: #5C5C5C 
+		p
+			margin-bottom: 8px
+		.copy__privacy 
+			color: #ffde00
+			font-weight: 800
+.footer__item
+	padding: 5px 10px 36px
+	border-top: 5px solid #5299F4
+	@include r(step5)
+		&.footer__item_l
+			text-align: left
+	@include r(step4)
+		&.footer__item_l
+			text-align: left
+		.btn
+			&.btn_blue
+				padding: 6px 12px
+				font-size: 14px
+		&.footer__item_r
+			text-align: right
+			.social
+				display: inline-block
+				li
+					margin-left: 3px
+					&:first-child
+						margin-left: 0
+	@include r(step3)
+		text-align: center
+		.social
+			display: inline-block
+		.h2
+			font-size: 16px
+	@include r(step2)
+		text-align: center
+		.social
+			display: inline-block
+		.h2
+			font-size: 18px
+	@include r(step1)
+		text-align: left
+		.h2
+			font-size: 20px
+	.h2
+		margin: 20px 0
+		font-weight: 100
+		color: #434343
+	.social
+		margin-top: 3px
+.copyright
+	padding: 25px
+	border-top: 1px solid #CACACA
+	font-size: 12px
+.logo
+	display: inline-block
+	+s(logo)
+	+hidetext
+/*------------------------- block -------------------------*/
+// some btn
+.btn-wrap
+	margin-top: 24px
+	font-size: 0
+	text-align: right
+	@include r(step3)
+		text-align: center
+.btn
+	&.btn_custum
+		width: 42px
+		padding: 8px 0px
+		margin-left: 7px
+		display: inline-block
+		text-align: center
+		+border-radius(5px)
+		color: #FFF 
+	&.btn_dark
+		background: #313131
+		&:hover, &:focus
+			// background: #3D3D3D 
+			color: #fff
+			text-decoration: none
+	&.btn_blue
+		padding: 13px 32px
+		border: 1px solid #7bb3cb
+		@include border-radius(4px)
+		background-color: #5199f3
+		+g(#78c8f9, #2d6bef)
+		color: #FFF
+		font-size: 18px
+		font-weight: 800 
+		@include text-shadow(0 -1px 0 #000)
+		&:hover
+			color: #fff 
+// dropdown
+.dropdown
+	&.dropdown_lang
+		display: inline-block
+		.dropdown-menu
+			background: #313131
+			margin: -4px 0 0
+			right: 0px
+			left: initial
+			border: none
+			+border-radius(3px 0 3px 3px)
+			li
+				margin-top: 5px
+				&:first-child
+					margin-top: 0
+				.ico
+					margin-right: 10px
+				a
+					color: #FFF
+					text-align: left
+					&:hover
+						background: #444242 
+	&.open
+		+border-radius(3px 3px 0px 3px)
+// owners
+.owners
+	position: relative
+	font-size: 0
+	+clr
+	&:after
+		content: ""
+		width: 1px
+		height: 80px
+		background: #ececec
+		position: absolute
+		right: 0
+		top: 0
+		+box-shadow(1px 0 0 #ddd)
+	@include r(step3)
+		margin-left: -80px
+		margin-bottom: 10px
+		text-align: center
+		&:after
+			content: none
+	@include r(step2)
+		&:after
+			right: -6px
+	@include r(step1)
+		&:after
+			right: 0
+.owners__media
+	width: 80px
+	height: 80px
+	overflow: hidden
+	display: inline-block
+	vertical-align: top
+	img
+		max-width: 100%
+.owners__link
+	display: inline-block
+	margin-left: 17px
+	font-size: 18px
+	color: #2A2A2A
+	font-weight: bold
+	vertical-align: top
+	&:hover
+		color: #2A2A2A
+// call
+.call
+	font-weight: bold
+	text-align: center
+	font-size: 18px
+	line-height: 1
+	position: relative
+	color: #434343
+	&:after
+		content: ""
+		+s(call-bg)
+		position: absolute
+		top: 0
+		right: 0
+	@include r(step3)
+		text-align: center
+		&:after
+			content: none
+	@include r(step2)
+		&:after
+			content: none
+	@include r(step1)
+		&:after
+			content: ""
+.call__num
+	font-size: 24px
+	font-weight: 800
+.call__now
+	color: #000 
+.call_mod
+	font-size: 16px
+	text-align: left
+	font-weight: normal
+	strong
+		font-weight: 800 
+	&:after
+		content: none
+// send
+.send
+	font-weight: bold 
+	font-size: 18px
+	color: #000 
+	text-align: center
+// social
+.social
+	font-size: 0
+	overflow: hidden
+	.ico
+		+transition(.2s)
+		&:hover
+			+opacity(0.8)
+			+transition(.2s)
+	li
+		margin-left: 9px
+		float: left
+		overflow: hidden
+		&:first-child
+			margin-left: 0
+	.fb
+		+s(fb)
+	.tw
+		+s(tw)
+	.pt
+		+s(pt)
 
-// common blocks
+@media(min-width: @screen-sm-min)
+	body
+		background: red 
