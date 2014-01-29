@@ -1,10 +1,24 @@
 // responsive example, edit or remove
-$breaksmall: 500px
+$breaksmall: 768px
 
 $breaklarge: 1180px
 
 =r($media)
 	@if $media == pda
+		// narrower than $width
+		@media only screen and (max-width: $breaksmall)
+			@content
+	@else if $media == wide
+		// wider than $width
+		@media only screen and (min-width: $breaklarge)
+			@content
+
+$breaksmall: 992px
+
+$breaklarge: 768px
+
+=r_992($media)
+	@if $media == pda_992
 		// narrower than $width
 		@media only screen and (max-width: $breaksmall)
 			@content

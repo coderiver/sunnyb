@@ -3,23 +3,83 @@
 	background: url('../img/background.png') 0 0 no-repeat !important 
 	background-size: cover !important
 	background-attachment: fixed !important
+	font: normal 14px"Roboto", sans-serif !important
 #wrap
 	width: 100%
 	height: 100%
+h3, .h3 
+	+rt
+h4, .h4
+	color: #4F4F4F 
+	font-size: 22px
 .wrapper-gallery
 	position: relative
-.header
+.header-wrapper
 	margin-top: 37px
 	margin-bottom: 17px
-	border-radius: 5px
 .header__row
 	border-radius: 5px
 	height: 300px
-.header__top
+.header-wrapper__top
+	padding: 7px 0 7px 5px 
+	border-radius: 5px 5px 0 0
+	color: #FFF 
 	background: #5cd7e2
-.header__bottom
+	vertical-align: middle
+	p
+		line-height: 2.1
+		font-size: 18px
+.top-link
+	padding: 10px 30px 0 0
+	color: #FFF 
+	font-weight: bold
+	line-height: 2.6
+	text-decoration: underline
+	+rb
+	&:hover
+		text-decoration: none
+		color: #FFF
+.dropdown_inb
+	float: right
+	margin-top: 0
+	display: inline-block
+	a
+		text-decoration: none
+	.btn
+		background: rgba(49, 49, 49, 0.4) 
+		&:hover
+			background: #313131 
+			+transition(.2s)
+	.open
+		.btn
+			background: #313131
+.header-wrapper__bott
+	padding: 20px 0
+	border-radius: 0 0 5px 5px
 	background: #fff
-	text-align: center
+	color: #434343
+	font-size: 18px
+	font-weight: normal
+	.text-bold
+		color: #000 
+	.text-light
+		font-size: 14px
+	strong
+		font-size: 22px
+.header-wrapper__logo
+	position: relative
+	padding-left: 80px
+	color: #075B99 
+	line-height: 75px 
+	font-size: 24px
+	+rh
+	&:hover
+		text-decoration: none
+	i
+		position: absolute
+		top: -30px
+		left: 0
+		+s(logo-header)
 .gallery
 	position: relative
 	height: 400px
@@ -28,30 +88,45 @@
 	border-top: 5px solid rgba(92, 215, 226, 0.4)
 	overflow: hidden
 .gallery__item
-	display: block
+	position: relative
 	float: left
 	width: 100%
+	height: 100%
+	display: block
 .gallery__img 
-	float: left
-	width: 70%
-	img
-		width: 100%
-.gallery__text
 	position: absolute
-	float: right
+	float: left
+	top: 0
+	bottom: 0
+	left: 0
+	right: 30%
+	background-position: center !important
+	background-repeat: no-repeat !important
+	background-size: cover !important
+.gallery__block
+	position: absolute
 	bottom: 0
 	right: 0
 	width: 30%
 	height: 100%
-	padding: 30px
-	color: #fff 
 	background: #384352 
+.gallery__text
+	position: relative
+	padding: 30px
+	color: #fff
+	width: 100%
+	height: 100%
 	.btn
 		position: absolute
-		bottom: 30px
 		left: 30px
 		right: 30px
-		width: 80%
+		bottom: 30px
+		font-size: 22px
+		+rb
+	.text-black
+		padding-bottom: 30px
+		line-height: 1
+		display: block
 .gallery__nav 
 	position: absolute
 	top: 50%
@@ -61,6 +136,7 @@
 	border-radius: 5px
 	box-shadow: 0 0 0 1px #7bb3cb
 	z-index: 200
+	background: #34c6d6 
 	+g(#85e9ef, #34c6d6)
 .gallery__prev 
 	left: -20px
@@ -107,7 +183,12 @@
 	font-weight: normal
 	z-index: 1 
 	text-align: right
-	background: #3DC972 
+	background: #3DC972
+	font-size: 15.06px 
+	+rl
+	strong
+		font-size: 18.41px
+		font-weight: bold
 	i
 		position: absolute
 		right: 0
@@ -126,6 +207,7 @@
 	border-radius: 50%
 	border: 1px solid #42ca75 
 	background: #fff 
+	+rb
 	&:before
 		position: absolute
 		content: ""
@@ -139,16 +221,19 @@
 	border-radius: 0 0 5px 0
 	+s(pic4)
 .block__text_bott
-	width: 100%
 	position: absolute
 	bottom: 25px
 	left: 30px
-	padding-left: 80px 
+	width: 100%
 	padding-right: 70px 
+.block__text_left
+	position: relative
+	float: left
+	padding-left: 80px
 	i
 		position: absolute
 		left: 10px
-		bottom: 0
+		top: 1px
 		+s(pic5)
 .strong_green
 	float: right
@@ -161,12 +246,6 @@
 	background: #FFF 
 	.block-padd
 		padding: 5px 25px 45px 0
-.padding_left
-	margin-left: -15px
-	padding-right: -15px
-.padding_right
-	float: right
-	padding-right: -15px
 .padding_
 	margin-left: 0
 	margin-right: 0
@@ -204,4 +283,42 @@
 .footer-col__copyright_mod
 	padding-right: 20px
 .footer-col__copyright
+	font-size: 12px
 	text-align: right
+.row__mod
+	&:before
+		display: none
+	&:after
+		display: none
+.text_grey
+	color: #434343 
+.text-bold
+	font-weight: bold
+.text-light
+	+rl 
+.text-black
+	+rb
++r_992(pda_992)
+	.gallery__text
+		.btn
+			font-size: 18px
++r(pda)
+	.gallery__item
+		position: relative
+	.gallery__img 
+		right: 0
+	.text-pad
+		padding-bottom: 35px
+	.gallery
+		height: 300px
+		.gallery__block
+			position: absolute
+			top: 0
+			right: 0
+			width: 100%
+			text-align: right
+			background: none
+			.btn
+				left: auto
+				min-width: 100px
+				font-size: 13px
