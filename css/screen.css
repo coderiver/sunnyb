@@ -82,13 +82,19 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 .gallery__item { position: relative; float: left; width: 100%; height: 100%; display: block; }
 
-.gallery__img { position: absolute; float: left; top: 0; bottom: 0; left: 0; right: 30%; background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important; }
+.gallery__img { position: absolute; float: left; top: 0; bottom: 0; left: 0; right: 45%; background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important; }
 
-.gallery__block { position: absolute; bottom: 0; right: 0; width: 30%; height: 100%; background: #384352; }
+.gallery__block { position: absolute; bottom: 0; right: 0; width: 45%; height: 100%; background: #384352; }
 
-.gallery__text { position: relative; padding: 30px; color: white; width: 100%; height: 100%; }
-.gallery__text .btn { position: absolute; left: 30px; right: 30px; bottom: 30px; font-size: 22px; font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
-.gallery__text .text-black { padding-bottom: 30px; line-height: 1; display: block; }
+.gallery__text { position: relative; padding: 15px 67px 28px 30px; color: white; width: 100%; height: 100%; }
+.gallery__text .btn { position: absolute; left: 30px; right: 67px; bottom: 30px; font-size: 22px; font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
+.gallery__text .gallery__text_top { padding-bottom: 15px; line-height: 1.6; display: block; }
+
+.cycle-pager { position: absolute; text-align: center; width: 100%; height: 10px; bottom: 16px; z-index: 500; }
+.cycle-pager button { margin-left: 5px; width: 10px; height: 10px; cursor: pointer; display: inline-block; background: #384352; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.cycle-pager .is-active { background: white; border: 1px solid #384352; }
+
+.pager { margin: 0; }
 
 .gallery__nav { position: absolute; top: 50%; margin-top: -20px; width: 40px; height: 40px; border-radius: 5px; box-shadow: 0 0 0 1px #7bb3cb; z-index: 200; background: #34c6d6; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85e9ef), color-stop(100%, #34c6d6)); background-image: -webkit-linear-gradient(#85e9ef, #34c6d6); background-image: -moz-linear-gradient(#85e9ef, #34c6d6); background-image: -o-linear-gradient(#85e9ef, #34c6d6); background-image: linear-gradient(#85e9ef, #34c6d6); }
 
@@ -103,7 +109,7 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .img-responsive__block { position: relative; }
 .img-responsive__block img { margin-bottom: 18px; width: 100%; }
 
-.thumbnail_sha-bott { border-bottom: 5px solid #5cd7e2; }
+.thumbnail_sha-bott { border-bottom: 5px solid #5cd7e2; height: 24.5em; }
 
 .container_sha-top { margin-bottom: 15px; background: white; border-radius: 5px; border-top: 6px solid #5cd7e2; }
 
@@ -113,10 +119,12 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .price strong { font-size: 18.41px; font-weight: bold; }
 .price i { position: absolute; right: 0; top: 100%; background: url('../img/icons-see82a39b3c.png') 0 -1060px no-repeat; width: 4px; height: 4px; }
 
-.preview { position: absolute; bottom: 17px; right: 14px; width: 30px; height: 20px; color: #3dc972; text-align: center; vertical-align: middle; line-height: 1.5; border-radius: 50%; border: 1px solid #42ca75; background: white; font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
-.preview:before { position: absolute; content: ""; bottom: -7px; right: 7px; background: url('../img/icons-see82a39b3c.png') 0 -1042px no-repeat; width: 8px; height: 8px; }
+.preview { position: absolute; top: 27px; left: 8px; width: 30px; height: 20px; color: #3dc972; text-align: center; vertical-align: middle; line-height: 1.3; border-radius: 50%; border: 1px solid #42ca75; background: white; font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
+.preview:before { position: absolute; content: ""; left: 11px; bottom: -7px; background: url('../img/icons-see82a39b3c.png') 0 -1042px no-repeat; width: 8px; height: 8px; }
 
 .rating { position: absolute; left: 0; top: 0; border-radius: 0 0 5px 0; background: url('../img/icons-see82a39b3c.png') 0 -1382px no-repeat; width: 67px; height: 21px; }
+
+.h4_block { padding: 0 14px; font-size: 18px; font-family: "Roboto", Arial, sans-serif; font-weight: 300; }
 
 .block__text_bott { position: absolute; bottom: 25px; left: 30px; width: 100%; padding-right: 70px; }
 
@@ -125,6 +133,8 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 .strong_green { float: right; color: #3dc972; display: inline-block; }
 .strong_green:hover { color: #3dc972; }
+
+.review-block { height: 14em; }
 
 .footer-col { padding-bottom: 60px; background: white; }
 .footer-col .block-padd { padding: 5px 25px 45px 0; }
@@ -153,13 +163,23 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 .text-black { font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
 
-@media only screen and (max-width: 992px) { .gallery__text .btn { font-size: 18px; } }
-@media only screen and (max-width: 992px) { .gallery__item { position: relative; }
+@media (max-width: 1200px) { .thumbnail_sha-bott { height: 21em; } }
+@media (max-width: 992px) { .thumbnail_sha-bott { height: 24.5em; }
+  .review-block { height: 18em; }
+  .gallery { height: 32em; } }
+@media (max-width: 768px) { .header-wrapper__logo { font-size: 22px; }
+  .thumbnail_sha-bott { height: 100%; }
+  .review-block { height: 19.7em; }
+  .gallery__item { position: relative; }
   .gallery__img { right: 0; }
+  .gallery__text { padding: 15px; }
   .text-pad { padding-bottom: 35px; }
-  .gallery { height: 300px; }
+  .gallery { height: 32em; }
   .gallery .gallery__block { position: absolute; top: 0; right: 0; width: 100%; text-align: right; background: none; }
-  .gallery .gallery__block .btn { left: auto; min-width: 100px; font-size: 13px; } }
+  .gallery .gallery__block .btn { left: auto; min-width: 100px; font-size: 13px; }
+  .gallery__text .btn { font-size: 18px; } }
+@media (max-width: 320px) { * { text-align: center; }
+  * .review-block { height: 30em; } }
 .ico { display: inline-block; vertical-align: middle; }
 
 .i-eng { background: url('../img/icons-see82a39b3c.png') 0 -1272px no-repeat; width: 16px; height: 11px; }

@@ -99,7 +99,7 @@ h4, .h4
 	top: 0
 	bottom: 0
 	left: 0
-	right: 30%
+	right: 45%
 	background-position: center !important
 	background-repeat: no-repeat !important
 	background-size: cover !important
@@ -107,26 +107,46 @@ h4, .h4
 	position: absolute
 	bottom: 0
 	right: 0
-	width: 30%
+	width: 45%
 	height: 100%
 	background: #384352 
 .gallery__text
 	position: relative
-	padding: 30px
+	padding: 15px 67px 28px 30px
 	color: #fff
 	width: 100%
 	height: 100%
 	.btn
 		position: absolute
 		left: 30px
-		right: 30px
+		right: 67px
 		bottom: 30px
 		font-size: 22px
 		+rb
-	.text-black
-		padding-bottom: 30px
-		line-height: 1
+	.gallery__text_top
+		padding-bottom: 15px
+		line-height: 1.6
 		display: block
+.cycle-pager
+	position: absolute
+	text-align: center
+	width: 100%
+	height: 10px
+	bottom: 16px
+	z-index: 500
+	button
+		margin-left: 5px
+		width: 10px
+		height: 10px 
+		cursor: pointer
+		display: inline-block
+		background: #384352
+		+border-radius(50%)
+	.is-active
+		background: #fff 
+		border: 1px solid #384352 
+.pager
+	margin: 0
 .gallery__nav 
 	position: absolute
 	top: 50%
@@ -162,6 +182,7 @@ h4, .h4
 .thumbnail_sha-bott
 	// box-shadow: 0 -3px 0 0 #5cd7e2 inset
 	border-bottom: 5px solid #5cd7e2
+	height: 24.5em
 .container_sha-top
 	margin-bottom: 15px
 	background: #FFF 
@@ -196,14 +217,14 @@ h4, .h4
 		+s(pic2)
 .preview
 	position: absolute
-	bottom: 17px
-	right: 14px
+	top: 27px
+	left: 8px
 	width: 30px
 	height: 20px
 	color: #3DC972
 	text-align: center
 	vertical-align: middle
-	line-height: 1.5 
+	line-height: 1.3 
 	border-radius: 50%
 	border: 1px solid #42ca75 
 	background: #fff 
@@ -211,8 +232,8 @@ h4, .h4
 	&:before
 		position: absolute
 		content: ""
+		left: 11px
 		bottom: -7px
-		right: 7px
 		+s(pic3)
 .rating
 	position: absolute
@@ -220,12 +241,16 @@ h4, .h4
 	top: 0
 	border-radius: 0 0 5px 0
 	+s(pic4)
+.h4_block
+	padding: 0 14px 
+	font-size: 18px
+	+rl
 .block__text_bott
 	position: absolute
 	bottom: 25px
 	left: 30px
 	width: 100%
-	padding-right: 70px 
+	padding-right: 70px
 .block__text_left
 	position: relative
 	float: left
@@ -241,6 +266,8 @@ h4, .h4
 	display: inline-block 
 	&:hover
 		color: #3DC972
+.review-block
+	height: 14em
 .footer-col
 	padding-bottom: 60px
 	background: #FFF 
@@ -298,19 +325,33 @@ h4, .h4
 	+rl 
 .text-black
 	+rb
-+r_992(pda_992)
-	.gallery__text
-		.btn
-			font-size: 18px
-+r(pda)
+@media (max-width: 1200px)
+	.thumbnail_sha-bott
+		height: 21em
+@media (max-width: 992px)
+	.thumbnail_sha-bott
+		height: 24.5em
+	.review-block
+		height: 18em
+	.gallery
+		height: 32em 
+@media (max-width: 768px)
+	.header-wrapper__logo
+		font-size: 22px
+	.thumbnail_sha-bott
+		height: 100%
+	.review-block
+		height: 19.7em 
 	.gallery__item
 		position: relative
 	.gallery__img 
 		right: 0
+	.gallery__text
+		padding: 15px
 	.text-pad
 		padding-bottom: 35px
 	.gallery
-		height: 300px
+		height: 32em
 		.gallery__block
 			position: absolute
 			top: 0
@@ -322,3 +363,11 @@ h4, .h4
 				left: auto
 				min-width: 100px
 				font-size: 13px
+	.gallery__text
+		.btn
+			font-size: 18px
+@media (max-width: 320px)
+	*
+		text-align: center
+		.review-block
+			height: 30em 
