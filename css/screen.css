@@ -78,7 +78,7 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .header-wrapper__logo:hover { text-decoration: none; }
 .header-wrapper__logo i { position: absolute; top: -30px; left: 0; background: url('../img/icons-see82a39b3c.png') 0 -853px no-repeat; width: 80px; height: 80px; }
 
-.gallery { position: relative; height: 400px; margin-bottom: 20px; border-radius: 5px 5px 0 0; border-top: 5px solid rgba(92, 215, 226, 0.4); overflow: hidden; }
+.gallery { position: relative; height: 400px; margin-bottom: 20px; border-radius: 5px 5px 0 0; overflow: hidden; }
 
 .gallery__item { position: relative; float: left; width: 100%; height: 100%; display: block; }
 
@@ -95,6 +95,10 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .cycle-pager .is-active { background: white; border: 1px solid #384352; }
 
 .pager { margin: 0; }
+
+.cycle-pager_top { top: 0; bottom: auto; left: 0; right: 0; font-size: 0; }
+.cycle-pager_top button { margin: 0; width: 33.33333%; height: 6px; opacity: 0.5; background: white; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.cycle-pager_top .is-active { opacity: 1; border: none; background: #5cd7e2; }
 
 .gallery__nav { position: absolute; top: 50%; margin-top: -20px; width: 40px; height: 40px; border-radius: 5px; box-shadow: 0 0 0 1px #7bb3cb; z-index: 200; background: #34c6d6; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85e9ef), color-stop(100%, #34c6d6)); background-image: -webkit-linear-gradient(#85e9ef, #34c6d6); background-image: -moz-linear-gradient(#85e9ef, #34c6d6); background-image: -o-linear-gradient(#85e9ef, #34c6d6); background-image: linear-gradient(#85e9ef, #34c6d6); }
 
