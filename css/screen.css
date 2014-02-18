@@ -117,7 +117,7 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 .container_sha-top { margin-bottom: 15px; background: white; border-radius: 5px; border-top: 6px solid #5cd7e2; }
 
-.container_bor-top { border-top: 6px solid #5cd7e2; background: white; }
+.container_bor-top { border-top: 6px solid #5cd7e2; background: white; text-align: center; }
 
 .price { position: absolute; padding: 6px 15px; top: 17px; right: 11px; width: 96px; height: 62px; color: white; font-size: 15.06px; line-height: 1; font-weight: normal; z-index: 1; text-align: right; background: #3dc972; font-size: 15.06px; font-family: "Roboto", Arial, sans-serif; font-weight: 300; }
 .price strong { font-size: 18.41px; font-weight: bold; }
