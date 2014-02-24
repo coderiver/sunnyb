@@ -92,6 +92,23 @@ h4, .h4
 	width: 100%
 	height: 100%
 	display: block
+.progress__item
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 6px
+	opacity: 0.5
+	z-index: 500
+	background: #ccc
+.progress 
+	position: absolute
+	top: 0
+	height: 6px
+	width: 0
+	z-index: 501
+	+border-radius(0)
+	background: #5CD7E2
 .gallery__img 
 	position: absolute
 	float: left
@@ -146,23 +163,6 @@ h4, .h4
 		border: 1px solid #384352 
 .pager
 	margin: 0
-.cycle-pager_top
-	top: 0
-	bottom: auto
-	left: 0
-	right: 0
-	font-size: 0
-	button
-		margin: 0
-		width: 33.3333333% 
-		height: 6px
-		opacity: 0.5
-		background: #FFF 
-		+border-radius(0)
-	.is-active
-		opacity: 1
-		border: none 
-		background: #5CD7E2 
 .gallery__nav 
 	position: absolute
 	top: 50%
@@ -287,6 +287,9 @@ h4, .h4
 	display: inline-block 
 	&:hover
 		color: #3DC972
+.footer__serv-text
+	float: right
+	display: inline-block
 .review-block
 	height: 14em
 .footer-col
@@ -350,12 +353,16 @@ h4, .h4
 	.thumbnail_sha-bott
 		height: 21em
 @media (max-width: 992px)
-	.thumbnail_sha-bott
-		height: 24.5em
 	.review-block
 		height: 18em
 	.gallery
-		height: 32em 
+		height: 34em 
+	.gallery__text
+		.btn
+			position: absolute
+			right: 30px
+			left: 30px
+			min-width: 250px
 @media (max-width: 768px)
 	.header-wrapper__logo
 		font-size: 22px
@@ -365,30 +372,44 @@ h4, .h4
 		height: 19.7em 
 	.gallery__item
 		position: relative
-	.gallery__img 
-		right: 0
-	.gallery__text
-		padding: 15px
 	.text-pad
 		padding-bottom: 35px
 	.gallery
-		height: 32em
-		.gallery__block
-			position: absolute
-			top: 0
-			right: 0
-			width: 100%
-			text-align: right
-			background: none
-			.btn
-				left: auto
-				min-width: 100px
-				font-size: 13px
+		height: 40em
 	.gallery__text
+		padding: 15px
 		.btn
-			font-size: 18px
-@media (max-width: 320px)
+			position: absolute
+			right: 15px
+			left: 15px
+			min-width: 160px
+			font-size: 14px
+	.footer-col__bott
+		*
+			text-align: center !important 
+		.strong_green, .footer-col__logo
+			float: none !important
+			display: block !important
+			margin: 0 auto
+@media (max-width: 460px)
 	*
 		text-align: center
-		.review-block
-			height: 30em 
+	.review-block
+		height: 30em 
+	.gallery
+		height: 60em
+		.gallery__img
+			float: left
+			position: relative
+			min-width: 100%
+			height: 40%
+			display: block
+		.gallery__block
+			float: right
+			min-width: 100%
+			height: 60%
+			display: block
+	.cycle-pager
+		top: 37%
+	.gallery__nav
+		top: 20%

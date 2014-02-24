@@ -82,6 +82,10 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 .gallery__item { position: relative; float: left; width: 100%; height: 100%; display: block; }
 
+.progress__item { position: absolute; top: 0; left: 0; right: 0; height: 6px; opacity: 0.5; z-index: 500; background: #cccccc; }
+
+.progress { position: absolute; top: 0; height: 6px; width: 0; z-index: 501; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; background: #5cd7e2; }
+
 .gallery__img { position: absolute; float: left; top: 0; bottom: 0; left: 0; right: 45%; background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important; }
 
 .gallery__block { position: absolute; bottom: 0; right: 0; width: 45%; height: 100%; background: #384352; }
@@ -95,10 +99,6 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .cycle-pager .is-active { background: white; border: 1px solid #384352; }
 
 .pager { margin: 0; }
-
-.cycle-pager_top { top: 0; bottom: auto; left: 0; right: 0; font-size: 0; }
-.cycle-pager_top button { margin: 0; width: 33.33333%; height: 6px; opacity: 0.5; background: white; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
-.cycle-pager_top .is-active { opacity: 1; border: none; background: #5cd7e2; }
 
 .gallery__nav { position: absolute; top: 50%; margin-top: -20px; width: 40px; height: 40px; border-radius: 5px; box-shadow: 0 0 0 1px #7bb3cb; z-index: 200; background: #34c6d6; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #85e9ef), color-stop(100%, #34c6d6)); background-image: -webkit-linear-gradient(#85e9ef, #34c6d6); background-image: -moz-linear-gradient(#85e9ef, #34c6d6); background-image: -o-linear-gradient(#85e9ef, #34c6d6); background-image: linear-gradient(#85e9ef, #34c6d6); }
 
@@ -138,6 +138,8 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .strong_green { float: right; color: #3dc972; display: inline-block; }
 .strong_green:hover { color: #3dc972; }
 
+.footer__serv-text { float: right; display: inline-block; }
+
 .review-block { height: 14em; }
 
 .footer-col { padding-bottom: 60px; background: white; }
@@ -168,22 +170,26 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 .text-black { font-family: "Roboto", Arial, sans-serif; font-weight: 900; }
 
 @media (max-width: 1200px) { .thumbnail_sha-bott { height: 21em; } }
-@media (max-width: 992px) { .thumbnail_sha-bott { height: 24.5em; }
-  .review-block { height: 18em; }
-  .gallery { height: 32em; } }
+@media (max-width: 992px) { .review-block { height: 18em; }
+  .gallery { height: 34em; }
+  .gallery__text .btn { position: absolute; right: 30px; left: 30px; min-width: 250px; } }
 @media (max-width: 768px) { .header-wrapper__logo { font-size: 22px; }
   .thumbnail_sha-bott { height: 100%; }
   .review-block { height: 19.7em; }
   .gallery__item { position: relative; }
-  .gallery__img { right: 0; }
-  .gallery__text { padding: 15px; }
   .text-pad { padding-bottom: 35px; }
-  .gallery { height: 32em; }
-  .gallery .gallery__block { position: absolute; top: 0; right: 0; width: 100%; text-align: right; background: none; }
-  .gallery .gallery__block .btn { left: auto; min-width: 100px; font-size: 13px; }
-  .gallery__text .btn { font-size: 18px; } }
-@media (max-width: 320px) { * { text-align: center; }
-  * .review-block { height: 30em; } }
+  .gallery { height: 40em; }
+  .gallery__text { padding: 15px; }
+  .gallery__text .btn { position: absolute; right: 15px; left: 15px; min-width: 160px; font-size: 14px; }
+  .footer-col__bott * { text-align: center !important; }
+  .footer-col__bott .strong_green, .footer-col__bott .footer-col__logo { float: none !important; display: block !important; margin: 0 auto; } }
+@media (max-width: 460px) { * { text-align: center; }
+  .review-block { height: 30em; }
+  .gallery { height: 60em; }
+  .gallery .gallery__img { float: left; position: relative; min-width: 100%; height: 40%; display: block; }
+  .gallery .gallery__block { float: right; min-width: 100%; height: 60%; display: block; }
+  .cycle-pager { top: 37%; }
+  .gallery__nav { top: 20%; } }
 .ico { display: inline-block; vertical-align: middle; }
 
 .i-eng { background: url('../img/icons-see82a39b3c.png') 0 -1272px no-repeat; width: 16px; height: 11px; }
