@@ -171,25 +171,37 @@ h4, .h4 { color: #4f4f4f; font-size: 22px; }
 
 @media (max-width: 1200px) { .thumbnail_sha-bott { height: 21em; } }
 @media (max-width: 992px) { .review-block { height: 18em; }
-  .gallery { height: 34em; }
-  .gallery__text .btn { position: absolute; right: 30px; left: 30px; min-width: 250px; } }
+  .gallery { height: 18em; }
+  .gallery__text .btn { position: absolute; right: 30px; left: 30px; min-width: 250px; }
+  .gallery__text_bot { display: none; }
+  .gallery__prev { left: -15px; }
+  .gallery__next { right: -15px; } }
 @media (max-width: 768px) { .header-wrapper__logo { font-size: 22px; }
-  .thumbnail_sha-bott { height: 100%; }
-  .review-block { height: 19.7em; }
+  .thumbnail_sha-bott { height: 23em; }
+  .review-block { height: 100% !important; }
   .gallery__item { position: relative; }
   .text-pad { padding-bottom: 35px; }
-  .gallery { height: 40em; }
   .gallery__text { padding: 15px; }
   .gallery__text .btn { position: absolute; right: 15px; left: 15px; min-width: 160px; font-size: 14px; }
   .footer-col__bott * { text-align: center !important; }
-  .footer-col__bott .strong_green, .footer-col__bott .footer-col__logo { float: none !important; display: block !important; margin: 0 auto; } }
+  .footer-col__bott .strong_green, .footer-col__bott .footer-col__logo { float: none !important; display: block !important; margin: 0 auto; }
+  .gallery__block { width: 40%; }
+  .gallery__img { right: 40%; }
+  .block__text_bott { position: relative; left: 0; }
+  .block__text_bott i { left: 0; }
+  .block__text_left { padding-left: 70px; }
+  .block__text_bott { padding-right: 0; } }
 @media (max-width: 460px) { * { text-align: center; }
   .review-block { height: 30em; }
-  .gallery { height: 60em; }
-  .gallery .gallery__img { float: left; position: relative; min-width: 100%; height: 40%; display: block; }
-  .gallery .gallery__block { float: right; min-width: 100%; height: 60%; display: block; }
-  .cycle-pager { top: 37%; }
-  .gallery__nav { top: 20%; } }
+  .gallery { height: 34em; }
+  .gallery .gallery__img { float: left; position: relative; min-width: 100%; height: 50%; display: block; }
+  .gallery .gallery__block { float: right; min-width: 100%; height: 50%; display: block; }
+  .cycle-pager { top: 46%; }
+  .gallery__nav { top: 25%; }
+  .thumbnail_sha-bott { height: 100% !important; }
+  .price { font-size: 10px; width: 80px; height: 45px; }
+  .price strong { font-size: 14px; }
+  .col-xs-6 { width: 100%; } }
 .ico { display: inline-block; vertical-align: middle; }
 
 .i-eng { background: url('../img/icons-see82a39b3c.png') 0 -1272px no-repeat; width: 16px; height: 11px; }
